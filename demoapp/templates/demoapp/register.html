@@ -1,0 +1,11 @@
+<h2>Register</h2>
+
+<form action="{% url 'demoapp:register' %}" method="post">
+  {% csrf_token %}
+    <label for="student_name">Enter student details </label>
+    <input id="register_no" type="number" name="register_no" value="register_no"><br>
+    <input id="student_name" type="text" name="student_name" value="Student_name"><br>
+    <input id="student_email" type="text" name="student_email" value="student_email"><br>
+    <input id="password" type="text" name="password" value="password"><br>
+    <input type="submit" value="OK">
+</form>

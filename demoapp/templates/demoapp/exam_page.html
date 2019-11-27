@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DEMO APP</title>
+</head>
+<body>
+
+<form action="{% url 'demoapp:answer' question.question_no %}" method="post">
+{% csrf_token %}
+
+<h1>{{ question.question_text }}</h1>
+{% for c in choice_list %}
+  <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ forloop.counter }}">
+  <label for="choice{{ forloop.counter }}">{{ c }}</label><br>
+{% endfor %}
+<input type="submit" value="answer">
+</form>
+</body>
+</html>
