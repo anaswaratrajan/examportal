@@ -1,2 +1,2 @@
-# examportal
-examportal app 
+# OnlineExamportal
+Basic examportal app using django
